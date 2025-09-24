@@ -17,6 +17,38 @@ Document Deserialization - Processes and structures extracted data
 UiPath Document Understanding - Advanced AI-powered document processing
 
 Email Notification - Sends results via email
+Project Structure
+
+```sh
+└── CV-Data-Extracted/
+    ├── DocumentUnderstanding
+    │   └── ExtractDataUsingUIPathDocumentUnderstanding.xaml
+    ├── Drive
+    │   └── SendEmail.xaml
+    ├── Main.xaml
+    ├── Main.xaml.json
+    ├── Outputs
+    │   └── Cvs.xlsx
+    ├── PDf
+    │   ├── DesiarizerOfStringDocuments.xaml
+    │   ├── ExtractDataUsingApi.xaml
+    │   └── SavePdfFilesToTxt.xaml
+    ├── Readme
+    ├── inputs
+    │   ├── CV.zip
+    │   ├── CV1.pdf
+    │   ├── CV2.pdf
+    │   ├── CV3.pdf
+    │   ├── CV4.pdf
+    │   ├── CV5.pdf
+    │   ├── Email Body.html
+    │   ├── ReqastBody.txt
+    │   ├── Resume.xlsx
+    │   ├── Youssef-Mohamed-Kamel-FlowCV-Cover-Letter-20250520.pdf
+    │   ├── cv.txt
+    │   └── rqss.txt
+    └── project.json
+```
 
 🔧 Technical Components
 Main Workflow (Main.xaml)
