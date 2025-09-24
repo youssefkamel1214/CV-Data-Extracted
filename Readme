@@ -19,7 +19,6 @@ UiPath Document Understanding - Advanced AI-powered document processing
 Email Notification - Sends results via email
 Project Structure
 
-```sh
 └── CV-Data-Extracted/
     ├── DocumentUnderstanding
     │   └── ExtractDataUsingUIPathDocumentUnderstanding.xaml
@@ -48,7 +47,7 @@ Project Structure
     │   ├── cv.txt
     │   └── rqss.txt
     └── project.json
-```
+
 
 🔧 Technical Components
 Main Workflow (Main.xaml)
