@@ -1,0 +1,114 @@
+CV/Resume Data Extraction Bot
+An automated UiPath RPA solution for extracting and processing data from CV/resume documents (PDF files) using multiple extraction methods.
+
+📋 Project Overview
+This UiPath workflow automates the extraction of data from CV/resume documents through a multi-stage processing pipeline that combines various data extraction technologies.
+
+🏗 Architecture
+The main workflow orchestrates several sub-processes:
+
+Core Processing Sequence:
+PDF to Text Conversion - Converts PDF files to readable text
+
+API-Based Data Extraction - Uses external APIs for intelligent data extraction
+
+Document Deserialization - Processes and structures extracted data
+
+UiPath Document Understanding - Advanced AI-powered document processing
+
+Email Notification - Sends results via email
+
+🔧 Technical Components
+Main Workflow (Main.xaml)
+Type: UiPath Sequence Workflow
+
+Input: PDF documents containing CV/resume data
+
+Output: Structured data table in CSV format
+
+Key Variables:
+strTableData - Extracted table data as string
+
+liststrDocuments - Array of processed document strings
+
+tablecvs - DataTable containing structured CV data
+
+intNumberofFiles - Count of processed files
+
+📁 Workflow Dependencies
+The main workflow invokes these sub-processes:
+
+PDF Processing Module (PDf/ folder):
+SavePdfFilesToTxt.xaml - PDF to text conversion
+
+ExtractDataUsingApi.xaml - API-based data extraction (uses Google API key)
+
+DesiarizerOfStringDocuments.xaml - Document deserialization
+
+Document Understanding Module (DocumentUnderstanding/ folder):
+ExtractDataUsingUIPathDocumentUnderstanding.xaml - AI-powered extraction
+
+Notification Module (Drive/ folder):
+SendEmail.xaml - Email reporting system
+
+⚙️ Configuration
+API Configuration:
+Google API Key: AIzaSyAwkFCb0DQv60kitGPu6WRJ4IgwjK__b_I
+
+Retry Logic: 3 attempts with 5-second delays
+
+Input/Output:
+Primary Output: out_tableCvs - DataTable containing extracted CV data
+
+File Processing: Handles multiple PDF documents sequentially
+
+🚀 Usage
+Prerequisites:
+UiPath Studio installed
+
+Valid API keys for external services
+
+Access to PDF documents for processing
+
+Running the Workflow:
+Place CV/resume PDF files in the designated input folder
+
+Configure API keys in the workflow settings
+
+Run the Main.xaml workflow in UiPath Studio
+
+Monitor processing through the invoked sub-workflows
+
+Retrieve structured data from the output DataTable
+
+🔄 Processing Flow
+text
+PDF Files → Text Conversion → API Extraction → Deserialization 
+     → Document Understanding → Data Structuring → Email Notification
+💡 Key Features
+Multi-method Extraction: Combines API-based and AI-powered extraction
+
+Error Handling: Built-in retry logic (3 attempts with delays)
+
+Batch Processing: Handles multiple documents sequentially
+
+Structured Output: Returns data in standardized DataTable format
+
+Email Reporting: Automated notification system
+
+🛠 Technologies Used
+UiPath RPA Platform
+
+Google APIs (for data extraction)
+
+UiPath Document Understanding (AI/ML capabilities)
+
+.NET Framework components
+
+Email integration for notifications
+
+📊 Output Format
+The workflow outputs a structured DataTable (tablecvs) containing extracted CV fields such as:
+
+Personal information
+Contact details
