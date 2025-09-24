@@ -84,7 +84,7 @@ SendEmail.xaml - Email reporting system
 
 ⚙️ Configuration
 API Configuration:
-Google API Key: AIzaSyAwkFCb0DQv60kitGPu6WRJ4IgwjK__b_I
+Google API Key: Your_API_Key
 
 Retry Logic: 3 attempts with 5-second delays
 
